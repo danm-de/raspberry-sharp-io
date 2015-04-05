@@ -1,0 +1,13 @@
+﻿<Application x:Class="Test.Components.Pcd8544.WpfGui.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:Test.Components.Pcd8544.WpfGui.Converters"
+             xmlns:views="clr-namespace:Test.Components.Pcd8544.WpfGui.Views"
+             xmlns:controls="clr-namespace:Test.Components.Pcd8544.WpfGui.Controls"
+             StartupUri="Views/Main/MainWindow.xaml">
+    <Application.Resources>
+        <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" /> 
+        <views:MainWindowViewModel x:Key="MainViewModel" />
+        <controls:PainterViewModel x:Key="PainterViewModel" />
+    </Application.Resources>
+</Application>

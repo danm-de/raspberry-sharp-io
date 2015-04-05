@@ -69,6 +69,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raspberry.IO", "Raspberry.I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raspberry.IO.Interop", "Raspberry.IO.Interop\Raspberry.IO.Interop.csproj", "{689CB6C4-3D23-45DA-8E00-87C28AEA32D0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test.Components.Pcd8544", "Test.Components.Pcd8544", "{ED7BBA0C-81B3-4373-A41C-78DD5AB931EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Components.Pcd8544.WpfGui", "Tests\Test.Components.Pcd8544\WpfGui\Test.Components.Pcd8544.WpfGui.csproj", "{04FB186E-0382-4E79-BEFB-9C5D051C3BFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Components.Pcd8544.Server", "Tests\Test.Components.Pcd8544\Server\Test.Components.Pcd8544.Server.csproj", "{83379214-C0C1-4FC6-B5DB-BF5A36AC3C24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -167,6 +173,14 @@ Global
 		{689CB6C4-3D23-45DA-8E00-87C28AEA32D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{689CB6C4-3D23-45DA-8E00-87C28AEA32D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{689CB6C4-3D23-45DA-8E00-87C28AEA32D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04FB186E-0382-4E79-BEFB-9C5D051C3BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04FB186E-0382-4E79-BEFB-9C5D051C3BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04FB186E-0382-4E79-BEFB-9C5D051C3BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04FB186E-0382-4E79-BEFB-9C5D051C3BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83379214-C0C1-4FC6-B5DB-BF5A36AC3C24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83379214-C0C1-4FC6-B5DB-BF5A36AC3C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83379214-C0C1-4FC6-B5DB-BF5A36AC3C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83379214-C0C1-4FC6-B5DB-BF5A36AC3C24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -191,6 +205,9 @@ Global
 		{0BB6C3CE-422E-49F2-9165-DEC06AFE1B1A} = {C39D0CC3-C0F2-4B58-8779-2CCB5B52534C}
 		{99EB3D1A-F0B7-454E-BB50-9B2F5349BC5B} = {C39D0CC3-C0F2-4B58-8779-2CCB5B52534C}
 		{CAF876A0-0FCB-44F7-96F1-53704CB6015F} = {C39D0CC3-C0F2-4B58-8779-2CCB5B52534C}
+		{ED7BBA0C-81B3-4373-A41C-78DD5AB931EC} = {15ECD485-B3FD-4B6F-8491-7489DFFC89BC}
+		{04FB186E-0382-4E79-BEFB-9C5D051C3BFB} = {ED7BBA0C-81B3-4373-A41C-78DD5AB931EC}
+		{83379214-C0C1-4FC6-B5DB-BF5A36AC3C24} = {ED7BBA0C-81B3-4373-A41C-78DD5AB931EC}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Raspberry.IO.GeneralPurpose\Raspberry.IO.GeneralPurpose.csproj

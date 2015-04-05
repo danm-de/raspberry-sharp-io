@@ -1,0 +1,56 @@
+﻿<Window x:Class="Test.Components.Pcd8544.WpfGui.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Test.Components.Pcd8544.WpfGui.Controls"
+        Title="MainWindow" Height="369" Width="348"
+        DataContext="{StaticResource MainViewModel}"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Margin="5" Grid.Row="0" Grid.Column="0"
+                       Text="RaspberryPI URL:" />
+            <TextBox Margin="5" Grid.Row="0" Grid.Column="1"
+                     IsEnabled="{Binding IsConnected, Mode=OneWay, Converter={StaticResource InverseBooleanConverter}}"
+                     Text="{Binding ConnectUrl, Mode=TwoWay}" />
+            <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" 
+                       Text="Reset pin:"/>
+            <ComboBox Margin="5" Grid.Row="1" Grid.Column="1" 
+                      IsEnabled="{Binding IsConnected, Mode=OneWay, Converter={StaticResource InverseBooleanConverter}}"
+                      ItemsSource="{Binding AvailablePins, Mode=OneTime}" SelectedItem="{Binding ResetPin, Mode=TwoWay}" />
+            <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" 
+                       Text="Data / Command mode pin:"/>
+            <ComboBox Margin="5" Grid.Row="2" Grid.Column="1" 
+                      IsEnabled="{Binding IsConnected, Mode=OneWay, Converter={StaticResource InverseBooleanConverter}}"
+                      ItemsSource="{Binding AvailablePins, Mode=OneTime}" SelectedItem="{Binding DcModePin, Mode=TwoWay}" />
+
+            <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" >
+                <Button Margin="5" Width="100" Content="Connect" 
+                        Command="{Binding ConnectCommand, Mode=OneTime}"/>
+                <Button Margin="5" Width="100" Content="Disconnect" 
+                        Command="{Binding DisconnectCommand, Mode=OneTime}"/>
+                <Button Margin="5" Width="100" Content="Reset"
+                        Command="{Binding ResetCommand, Mode=OneTime}" />
+            </StackPanel>
+        </Grid>
+
+        <controls:Painter Grid.Row="1"
+                          UpdateImageCommand="{Binding 
+            RelativeSource={RelativeSource AncestorType={x:Type Window}}, 
+            Path=DataContext.UpdateImageCommand, Mode=OneTime}" />
+    </Grid>
+</Window>
