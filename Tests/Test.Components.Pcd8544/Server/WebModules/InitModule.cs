@@ -14,10 +14,10 @@ namespace Test.Components.Pcd8544.Server.WebModules
         public InitModule(IDisplayServer displayServer) {
             this.displayServer = displayServer;
 
-            Put["/init"] = ctx => Init(ctx);
+            Put["/init"] = ctx => Initialize(ctx);
         }
 
-        private dynamic Init(dynamic ctx) {
+        private dynamic Initialize(dynamic ctx) {
             var resetPin = Enum.Parse(typeof(ProcessorPin), Request.Query["ResetPin"]);
             var dcModePin = Enum.Parse(typeof(ProcessorPin), Request.Query["DcModePin"]);
 

@@ -109,6 +109,8 @@
     <Compile Include="Displays\Hd44780\Hd44780LcdConnection.cs" />
     <Compile Include="Displays\Hd44780\Hd44780LcdConnectionSettings.cs" />
     <Compile Include="Displays\Hd44780\Hd44780Pins.cs" />
+    <Compile Include="Displays\Pcd8544\ExtensionMethods.cs" />
+    <Compile Include="Displays\Pcd8544\Pcd8544Connection.cs" />
     <Compile Include="Displays\Ssd1306\ScrollDirection.cs" />
     <Compile Include="Displays\Ssd1306\ScrollSpeed.cs" />
     <Compile Include="Expanders\Mcp23017\Mcp23017InputBinaryPin.cs" />
@@ -178,9 +180,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Displays\Pcd8544\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

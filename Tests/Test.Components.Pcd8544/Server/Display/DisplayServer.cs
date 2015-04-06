@@ -9,7 +9,7 @@ namespace Test.Components.Pcd8544.Server.Display
 
         public void Start(ProcessorPin resetPin, ProcessorPin dcModePin) {
             lock (sync) {
-                throw new NotImplementedException();
+                //throw new NotImplementedException();
             }
         }
     }

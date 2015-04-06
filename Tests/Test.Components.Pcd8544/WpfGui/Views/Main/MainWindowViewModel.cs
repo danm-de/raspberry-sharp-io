@@ -136,7 +136,8 @@ namespace Test.Components.Pcd8544.WpfGui.Views
 
             var encoder = new PngBitmapEncoder();
             using (var stream = new MemoryStream()) {
-                encoder.Frames.Add(BitmapFrame.Create(imageSource));
+                var bitmapFrame = BitmapFrame.Create(imageSource);
+                encoder.Frames.Add(bitmapFrame);
                 encoder.Save(stream);
                 stream.Seek(0, SeekOrigin.Begin);
                 request.AddFile("image.png", stream.ToArray(), "image.png", "image/png");
